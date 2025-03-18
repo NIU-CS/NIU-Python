@@ -6,3 +6,6 @@
 *.log
 *.png
 *.pdf
+
+.ropeproject/
+myenv/
