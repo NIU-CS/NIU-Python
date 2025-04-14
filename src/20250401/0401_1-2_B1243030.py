@@ -1,5 +1,6 @@
 from rich import print
 
+
 def is_leap(year):
     if year % 400 == 0:
         return True
@@ -10,6 +11,7 @@ def is_leap(year):
     else:
         return False
 
+
 def days_in_month(year, month):
     if month == 2:
         return 29 if is_leap(year) else 28
@@ -17,6 +19,7 @@ def days_in_month(year, month):
         return 30
     else:
         return 31
+
 
 def month_season(month):
     if month in [1, 2, 3]:
@@ -28,6 +31,7 @@ def month_season(month):
     else:
         return "Autumn"
 
+
 def month_fruits(month):
     if month in [1, 2, 3]:
         return ["Apple", "Banana", "Orange"]
@@ -37,6 +41,7 @@ def month_fruits(month):
         return ["Watermelon", "Cantaloupe", "Pineapple"]
     else:
         return ["Grape", "Peach", "Pear"]
+
 
 def fruits_month(fruit):
     match fruit:
@@ -66,6 +71,7 @@ def fruits_month(fruit):
             return [10, 11, 12]
         case _:
             return []
+
 
 if __name__ == "__main__":
     month = int(input("輸入月份："))

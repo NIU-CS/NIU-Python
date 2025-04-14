@@ -1,5 +1,6 @@
 from rich import print
 
+
 def discount(spent):
     if spent >= 0 and spent < 500:
         return 1
@@ -18,6 +19,7 @@ def discount(spent):
     else:
         return 0
 
+
 def gap_to_next_level(spent):
     if spent >= 0 and spent < 500:
         return 500 - spent
@@ -33,6 +35,7 @@ def gap_to_next_level(spent):
         return 5000 - spent
     elif spent > 5000:
         return 0
+
 
 if __name__ == "__main__":
     spent = float(input("輸入購物金額："))

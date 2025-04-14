@@ -1,6 +1,7 @@
 from decimal import Decimal, ROUND_HALF_DOWN, ROUND_HALF_EVEN, ROUND_UP
 from rich import print
 
+
 def custom_round_05up(value):
     """
     模擬 ROUND_05UP：如果第三位小數為 0 或 5，則進位，否則四捨六入
@@ -9,7 +10,10 @@ def custom_round_05up(value):
     third_decimal_place = int((value_decimal * 1000) % 10)  # 取得第三位數字
     if third_decimal_place in [0, 5]:  # 若第三位小數為 0 或 5
         return value_decimal.quantize(Decimal("0.01"), rounding=ROUND_UP)
-    return value_decimal.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)  # 否則用正常四捨五入
+    return value_decimal.quantize(
+        Decimal("0.01"), rounding=ROUND_HALF_UP
+    )  # 否則用正常四捨五入
+
 
 if __name__ == "__main__":
     # 測試數值
@@ -23,7 +27,9 @@ if __name__ == "__main__":
 
     # 依照不同方法進行四捨五入
     for method, rounding_mode in rounding_methods.items():
-        rounded_values = [n.quantize(Decimal("0.01"), rounding=rounding_mode) for n in numbers]
+        rounded_values = [
+            n.quantize(Decimal("0.01"), rounding=rounding_mode) for n in numbers
+        ]
         print(f"[bold cyan]{method}[/bold cyan]: {rounded_values}")
 
     # 手動處理 ROUND_05UP

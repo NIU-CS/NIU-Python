@@ -1,5 +1,6 @@
 from rich import print
 
+
 def is_leap(year):
     if year % 400 == 0:
         return True
@@ -10,6 +11,7 @@ def is_leap(year):
     else:
         return False
 
+
 def days_in_month(year, month):
     if month == 2:
         return 29 if is_leap(year) else 28
@@ -17,6 +19,7 @@ def days_in_month(year, month):
         return 30
     else:
         return 31
+
 
 def month_season(month):
     if month in [1, 2, 3]:
@@ -27,6 +30,7 @@ def month_season(month):
         return "Summer"
     else:
         return "Autumn"
+
 
 if __name__ == "__main__":
     month = int(input("輸入月份："))

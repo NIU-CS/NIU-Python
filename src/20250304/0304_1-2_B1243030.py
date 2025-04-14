@@ -1,7 +1,9 @@
 from rich import print
 
+
 def swap(a, b):
     return b, a
+
 
 if __name__ == "__main__":
     A = 23

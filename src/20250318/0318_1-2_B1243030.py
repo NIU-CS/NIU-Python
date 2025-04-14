@@ -1,14 +1,16 @@
 from rich import print
 from decimal import Decimal
 
+
 def different_from_digit(num1, num2):
-    num1_str = str(num1).split('.')[1]
-    num2_str = str(num2).split('.')[1]
+    num1_str = str(num1).split(".")[1]
+    num2_str = str(num2).split(".")[1]
     min_len = min(len(num1_str), len(num2_str))
     for i in range(min_len):
         if num1_str[i] != num2_str[i]:
             return i
     return min_len
+
 
 if __name__ == "__main__":
     print("input two float numbers")

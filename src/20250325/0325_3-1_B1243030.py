@@ -1,5 +1,6 @@
 from rich import print
 
+
 def discount(spent):
     if spent >= 0 and spent < 500:
         return 1
@@ -17,6 +18,7 @@ def discount(spent):
         return 0.7
     else:
         return 0
+
 
 if __name__ == "__main__":
     spent = float(input("輸入購物金額："))

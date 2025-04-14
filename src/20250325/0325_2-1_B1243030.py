@@ -1,20 +1,22 @@
 from rich import print
 
+
 def grade(score):
     if score < 0 or score > 100:
-        return 'N'
+        return "N"
     elif score >= 90:
-        return 'A'
+        return "A"
     elif score >= 85:
-        return 'B+'
+        return "B+"
     elif score >= 80:
-        return 'B'
+        return "B"
     elif score >= 70:
-        return 'C+'
+        return "C+"
     elif score >= 60:
-        return 'C'
+        return "C"
     else:
-        return 'F'
+        return "F"
+
 
 if __name__ == "__main__":
     score = input("輸入分數：")
