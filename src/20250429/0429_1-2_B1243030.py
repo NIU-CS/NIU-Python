@@ -11,7 +11,7 @@ if __name__ == "__main__":
     tasks_iterator = iter(tasks)
     finished_task_count = 0
     current_task_index = -1
-    while True: # input = s(skip)/q(quit)/enter
+    while True:  # input = s(skip)/q(quit)/enter
         current_task_index += 1
         if current_task_index == len(tasks):
             print("已完成或跳過所有任務！")
