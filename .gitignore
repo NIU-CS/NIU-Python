@@ -5,7 +5,7 @@
 *.aux
 *.log
 *.png
-*.pdf
+tex/*.pdf
 
 .ropeproject/
 myenv/
